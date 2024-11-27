@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    environment: env
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +34,15 @@ jobs:
           echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
           echo "LANGUAGE_CODE=${{ secrets.LANGUAGE_CODE }}" >> $GITHUB_ENV
           echo "TIME_ZONE=${{ secrets.TIME_ZONE }}" >> $GITHUB_ENV
+
+
+      - name: Display environment variables
+        run: |
+          echo "ALLOWED_HOSTS: $ALLOWED_HOSTS"
+          echo "DEBUG: $DEBUG"
+          echo "SECRET_KEY: $SECRET_KEY"
+          echo "LANGUAGE_CODE: $LANGUAGE_CODE"
+          echo "TIME_ZONE: $TIME_ZONE"
 
       - name: Setup DB
         run: |
