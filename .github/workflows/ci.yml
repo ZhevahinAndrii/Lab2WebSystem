@@ -30,9 +30,9 @@ jobs:
         run: |
           echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> $GITHUB_ENV
           echo "DEBUG=${{ secrets.DEBUG }}" >> $GITHUB_ENV
-          echo "SECRET_KEY=${{secrets.SECRET_KEY}}" >> $GITHUB_ENV
-          echo "LANGUAGE_CODE=${{secrets.LANGUAGE_CODE}}" >> $GITHUB_ENV
-          echo "TIME_ZONE=${{secrets.TIME_ZONE}}" >> $GITHUB_ENV
+          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
+          echo "LANGUAGE_CODE=${{ secrets.LANGUAGE_CODE }}" >> $GITHUB_ENV
+          echo "TIME_ZONE=${{ secrets.TIME_ZONE }}" >> $GITHUB_ENV
 
       - name: Setup DB
         run: |
