@@ -28,7 +28,7 @@ jobs:
       
       - name: Setup DB
         run: |
-          python manage.py migrate --settings=Lab1WebSystems.settings
+          python manage.py migrate --settings=lab2.settings
       
       - name: Run tests
         run: |
